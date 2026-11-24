@@ -24,6 +24,8 @@
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
   "name": "Dra. Renata Martins · Estética Avançada",
+  "legalName": "Serviços de Cuidado e Saúde Ltda",
+  "taxID": "43.280.962/0001-54",
   "image": "https://www.drarenatamartinsharmoniza.com.br/img/og.jpg",
   "url": "https://www.drarenatamartinsharmoniza.com.br/",
   "telephone": "+55-31-99215-4994",
@@ -32,6 +34,7 @@
     "@type": "PostalAddress",
     "streetAddress": "Rua José Brandão, 315, Sala 506 — Centro Comercial Geraldo Mansur",
     "addressLocality": "Belo Horizonte",
+    "postalCode": "30640-020",
     "addressRegion": "MG",
     "addressCountry": "BR"
   },
@@ -148,7 +151,9 @@ body.ready .arch{clip-path:inset(0 0 0 0 round 999px 999px 18px 18px)}
 @keyframes drip{from{transform:translateY(-100%)}to{transform:translateY(260%)}}
 
 /* orb */
-.orb{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(195,160,126,.28),rgba(168,123,119,.12) 40%,transparent 68%);filter:blur(10px);transition:opacity .6s}
+.orb{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(195,160,126,.2),rgba(168,123,119,.08) 40%,transparent 68%);filter:blur(10px);opacity:0;transition:opacity 1s}
+.orb.on{opacity:1}
+@media (hover:none){.orb{display:none}}
 main,footer,.hero{position:relative;z-index:1}
 
 /* marquee */
@@ -283,7 +288,7 @@ body.drawer-open,body.menu{overflow:hidden}
 .qnav button{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .4s var(--ease)}
 .qnav button:hover{background:var(--plum);color:var(--porcelain);border-color:var(--plum)}
 .qnav .count{font-family:var(--serif);font-style:italic;font-size:20px;margin-left:12px;color:var(--muted)}
-.ig-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:clamp(60px,8vw,110px)}
+.ig-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:clamp(60px,8vw,110px)}
 .ig-strip a{border-radius:14px;overflow:hidden;aspect-ratio:4/5;position:relative;display:block}
 .ig-strip img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .ig-strip a:hover img{transform:scale(1.06)}
@@ -336,7 +341,9 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
 .fgrid h6{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--rose-d);margin-bottom:16px}
 .fgrid p,.fgrid a{font-size:14px;color:var(--muted);line-height:1.9}
 .fgrid a:hover{color:var(--ink)}
-.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:70px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.legal span{max-width:900px;line-height:1.7}
+.legal strong{font-weight:600;color:var(--ink)}
+.legal{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-top:70px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 
 /* whatsapp flutuante */
 .wa{position:fixed;right:22px;bottom:22px;z-index:65;display:flex;align-items:center;gap:0;background:var(--plum);color:var(--porcelain);border-radius:999px;padding:8px;box-shadow:0 20px 40px -14px rgba(42,23,29,.55);transform:translateY(140%);transition:transform .8s var(--ease),gap .5s var(--ease)}
@@ -432,6 +439,10 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
   .orb{display:none}
   .preview{display:none}
   details .ans{padding-right:0}
+  .res-cap{flex-direction:column;gap:2px}
+  .res-cap b{font-size:23px}
+  .ig-strip{grid-template-columns:repeat(3,1fr);gap:8px}
+  .ba .knob{width:52px;height:52px;margin:-26px 0 0 -26px}
   .qwrap{min-height:470px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -526,7 +537,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
       <div class="stats reveal d3">
         <div><b data-count="23">0</b><span>anos de trajetória na saúde</span></div>
         <div><b data-count="11">0</b><span>procedimentos faciais e corporais</span></div>
-        <div><b>1<sup>ª</sup></b><span>universitária da família</span></div>
+        <div><b>1ª</b><span>universitária da família</span></div>
       </div>
     </div>
   </div>
@@ -615,7 +626,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
   </div>
 </section>
 
-<section class="sec wrap" id="depoimentos">
+<section class="sec wrap" id="depoimentos" style="padding-top:0">
   <div class="testi">
     <div>
       <div class="eyebrow reveal">Depoimentos</div>
@@ -636,7 +647,6 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
     <a class="reveal" href="https://www.instagram.com/drarenata_martins/" target="_blank" rel="noopener"><img src="img/ig-atendimento.webp" alt="Atendimento na clínica" loading="lazy"></a>
     <a class="reveal d1" href="https://www.instagram.com/drarenata_martins/" target="_blank" rel="noopener"><img src="img/ig-sculptra.webp" alt="Bioestimulador de colágeno" loading="lazy"></a>
     <a class="reveal d2" href="https://www.instagram.com/drarenata_martins/" target="_blank" rel="noopener"><img src="img/ig-labios.webp" alt="Preenchimento labial" loading="lazy"></a>
-    <a class="reveal d3" href="https://www.instagram.com/drarenata_martins/" target="_blank" rel="noopener"><img src="img/ig-renata-blazer.webp" alt="Dra. Renata Martins" loading="lazy"></a>
   </div>
 </section>
 
@@ -695,7 +705,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
     <div><h6>Fale</h6><a data-wa="Olá, Dra. Renata! Vim pelo site." href="#">WhatsApp (31) 99215-4994</a><br><a href="mailto:natinhamartins@gmail.com">natinhamartins@gmail.com</a><br><a href="https://www.instagram.com/drarenata_martins/" target="_blank" rel="noopener">Instagram @drarenata_martins</a></div>
   </div>
   <div class="legal">
-    <span>© <span id="ano">2026</span> Dra. Renata Martins · Estética Avançada. Resultados variam de pessoa para pessoa.</span>
+    <span>© <span id="ano">2026</span> Dra. Renata Martins · Estética Avançada é uma marca de <strong>Serviços de Cuidado e Saúde Ltda</strong> · CNPJ 43.280.962/0001-54 · Rua José Brandão, 315, Barreiro, Belo Horizonte/MG, CEP 30640-020. Resultados variam de pessoa para pessoa.</span>
     <a href="politica-de-privacidade.html">Política de privacidade</a>
   </div>
 </footer>
@@ -719,7 +729,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
     <div class="tags" id="dtags"></div>
   </div>
   <div class="foot">
-    <a class="btn btn-dark" id="dcta" href="#" target="_blank" rel="noopener">Quero avaliar este procedimento
+    <a class="btn btn-dark" id="dcta" href="https://wa.me/5531992154994" target="_blank" rel="noopener">Quero avaliar este procedimento
       <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
   </div>
 </aside>
@@ -817,7 +827,7 @@ chipsEl.addEventListener('click', e => {
 /* preview que segue o cursor */
 const pv = document.getElementById('preview'), pvm = pv.querySelector('.m'), pvp = pv.querySelector('p');
 let mx = innerWidth / 2, my = innerHeight / 2, px = mx, py = my;
-addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; if (e.pointerType === 'mouse') document.querySelector('.orb').classList.add('on'); }, { passive: true });
 groupsEl.addEventListener('pointerover', e => {
   const r = e.target.closest('.row'); if (!r) return;
   const p = P[r.dataset.i]; pvm.style.background = M[p.m];
