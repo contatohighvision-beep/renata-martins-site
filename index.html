@@ -269,6 +269,7 @@ body.drawer-open,body.menu{overflow:hidden}
 .step.end{background:transparent;border:1px dashed rgba(251,247,244,.25);justify-content:center;align-items:flex-start;gap:26px}
 .step.end h5{font-size:clamp(38px,3.6vw,56px)}
 
+
 /* depoimentos */
 .testi{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,100px);align-items:start}
 .qwrap{position:relative;min-height:380px}
@@ -344,6 +345,52 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
 .wa .lb{max-width:0;overflow:hidden;white-space:nowrap;font-size:13px;letter-spacing:.06em;transition:max-width .6s var(--ease),padding .6s var(--ease)}
 .wa:hover .lb{max-width:220px;padding:0 16px 0 14px}
 
+
+/* resultados */
+.results-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.results-head p{max-width:400px;color:var(--muted)}
+.res-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(14px,1.6vw,24px);align-items:stretch}
+.ba{position:relative;border-radius:22px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;background:var(--blush);--x:50%}
+.ba img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--porcelain);box-shadow:0 0 20px rgba(0,0,0,.25);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--x);width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--porcelain);display:grid;place-items:center;color:var(--plum);box-shadow:0 14px 34px -10px rgba(42,23,29,.5);pointer-events:none;transition:transform .4s var(--ease)}
+.ba:hover .knob{transform:scale(1.08)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .lbl,.dip .lbl{position:absolute;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--porcelain);background:rgba(42,23,29,.42);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:8px 12px;border-radius:999px;pointer-events:none}
+.ba .lbl{top:18px}
+.ba .lbl.l{left:18px}.ba .lbl.r{right:18px}
+.res-cap{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-top:16px}
+.res-cap b{font-family:var(--serif);font-weight:400;font-size:26px}
+.res-cap span{font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.res-side{display:flex;flex-direction:column}
+.dip{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-radius:22px;overflow:hidden;flex:1;min-height:0}
+.dip figure{position:relative;overflow:hidden}
+.dip img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.dip:hover img{transform:scale(1.04)}
+.dip .lbl{left:14px;bottom:14px}
+.lav{margin-top:clamp(70px,9vw,120px)}
+.lav-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+.lav-head h3{font-family:var(--serif);font-weight:300;font-size:clamp(34px,3.6vw,56px);line-height:1}
+.lav-head h3 em{color:var(--rose)}
+.lav-nav{display:flex;gap:10px}
+.lav-nav button{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .4s var(--ease)}
+.lav-nav button:hover{background:var(--plum);color:var(--porcelain);border-color:var(--plum)}
+.lav-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scroll-padding-inline:var(--pad);cursor:grab}
+.lav-track::-webkit-scrollbar{display:none}
+.lav-track.drag{cursor:grabbing;scroll-snap-type:none}
+.lav-card{flex:none;width:clamp(280px,30vw,430px);scroll-snap-align:start}
+.lav-card .im{border-radius:18px;overflow:hidden;aspect-ratio:720/510;background:var(--blush);position:relative}
+.lav-card img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform 1.2s var(--ease)}
+.lav-card:hover img{transform:scale(1.04)}
+.lav-card h4{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;margin:16px 0 6px}
+.lav-card p{font-size:14px;color:var(--muted)}
+.lav-card .ses{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-d);border:1px solid var(--rose);padding:5px 10px;border-radius:999px;margin-top:12px}
+.res-note{margin-top:34px;font-size:12px;color:var(--muted);letter-spacing:.02em;max-width:720px}
+.drawer .dres{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 30px}
+.drawer .dres img{border-radius:12px;aspect-ratio:720/510;object-fit:cover;width:100%}
+.drawer .dres-t{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--rose-d);margin-bottom:12px}
+
 /* responsivo */
 @media (max-width:1080px){
   .nav ul{display:none}
@@ -351,7 +398,8 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
   .nav .btn{display:none}
   .hero{grid-template-columns:1fr;align-items:start;padding-top:110px}
   .portrait{justify-self:center;width:min(86%,440px);margin-top:20px}
-  .about,.testi,.faq{grid-template-columns:1fr}
+  .about,.testi,.faq,.res-grid{grid-template-columns:1fr}
+  .dip{aspect-ratio:8/5;flex:none}
   .about-img{max-width:520px}
   .fgrid{grid-template-columns:1fr 1fr}
   .scroll-cue{display:none}
@@ -409,7 +457,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
   <ul>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#procedimentos">Procedimentos</a></li>
-    <li><a href="#jornada">Jornada</a></li>
+    <li><a href="#resultados">Resultados</a></li>
     <li><a href="#clinica">Clínica</a></li>
     <li><a href="#duvidas">Dúvidas</a></li>
   </ul>
@@ -421,7 +469,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
 <nav class="mmenu" aria-label="Menu">
   <a href="#sobre">Sobre</a>
   <a href="#procedimentos"><em>Procedimentos</em></a>
-  <a href="#jornada">Jornada</a>
+  <a href="#resultados">Resultados</a>
   <a href="#clinica"><em>Clínica</em></a>
   <a href="#duvidas">Dúvidas</a>
   <a class="btn btn-dark" data-wa="Olá, Dra. Renata! Vim pelo site e gostaria de agendar minha avaliação gratuita." href="#">Agendar avaliação gratuita</a>
@@ -524,6 +572,49 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
   </div>
 </section>
 
+
+<section class="sec wrap" id="resultados">
+  <div class="results-head">
+    <div>
+      <div class="eyebrow reveal">Resultados reais</div>
+      <h2 class="h2 reveal d1">A prova está<br><em>na pele.</em></h2>
+    </div>
+    <p class="reveal d2">Pacientes da clínica fotografadas antes e depois do tratamento, sem filtros. Arraste para comparar.</p>
+  </div>
+  <div class="res-grid">
+    <div class="reveal">
+      <div class="ba" id="ba">
+        <img src="img/ba-olhar-depois.webp" alt="Região dos olhos depois do tratamento" loading="lazy">
+        <div class="before"><img src="img/ba-olhar-antes.webp" alt="Região dos olhos antes do tratamento" loading="lazy"></div>
+        <span class="lbl l">Antes</span><span class="lbl r">Depois</span>
+        <span class="line"></span>
+        <span class="knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+        <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Comparar antes e depois">
+      </div>
+      <div class="res-cap"><b>Olhar mais descansado</b><span>Região dos olhos</span></div>
+    </div>
+    <div class="res-side reveal d1">
+      <div class="dip">
+        <figure><img src="img/ba-face-antes.webp" alt="Rosto de paciente antes do tratamento" loading="lazy"><span class="lbl">Antes</span></figure>
+        <figure><img src="img/ba-face-depois.webp" alt="Rosto de paciente depois do tratamento" loading="lazy"><span class="lbl">Depois</span></figure>
+      </div>
+      <div class="res-cap"><b>Pele mais uniforme</b><span>Face</span></div>
+    </div>
+  </div>
+
+  <div class="lav">
+    <div class="lav-head">
+      <h3 class="reveal">Laser <em>Lavieen</em>, caso a caso.</h3>
+      <div class="lav-nav reveal d1">
+        <button id="lprev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 12H4M10 6l-6 6 6 6"/></svg></button>
+        <button id="lnext" aria-label="Próximo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="lav-track" id="lav"></div>
+    <p class="res-note">Imagens de pacientes reais da clínica, com o rosto parcialmente coberto para preservar a identidade. Os resultados variam de pessoa para pessoa e dependem da avaliação individual.</p>
+  </div>
+</section>
+
 <section class="sec wrap" id="depoimentos">
   <div class="testi">
     <div>
@@ -623,6 +714,7 @@ footer{padding:90px var(--pad) 36px;max-width:1560px;margin-inline:auto}
     <h4 id="dtitle"></h4>
     <p class="desc" id="ddesc"></p>
     <ul id="dlist"></ul>
+    <div id="dres"></div>
     <p class="note" id="dnote"></p>
     <div class="tags" id="dtags"></div>
   </div>
@@ -745,6 +837,7 @@ function openDrawer(i) {
   document.getElementById('ddesc').textContent = p.d;
   document.getElementById('dlist').innerHTML = p.b.map(x => `<li>${x}</li>`).join('');
   document.getElementById('dnote').textContent = p.n;
+  document.getElementById('dres').innerHTML = p.t === 'Laser Lavieen' ? `<div class="dres-t">Resultados reais</div><div class="dres">${LAV.slice(0, 4).map(c => `<img src="img/${c.img}.webp" alt="${c.t}" loading="lazy">`).join('')}</div>` : '';
   document.getElementById('dtags').innerHTML = p.c.map(c => `<span>${CONCERNS[c]}</span>`).join('');
   document.getElementById('dcta').href = waLink(`Olá, Dra. Renata! Vim pelo site e tenho interesse em ${p.t}. Gostaria de agendar uma avaliação gratuita.`);
   lastFocus = document.activeElement;
@@ -779,6 +872,47 @@ const co = new IntersectionObserver(es => es.forEach(e => {
   requestAnimationFrame(step);
 }), { threshold: .6 });
 document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+/* resultados: Laser Lavieen */
+const LAV = [
+  { img:'res-0417-0830', t:'Hidratação e rugas finas', d:'Pele mais hidratada e linhas suavizadas.', s:'1 sessão' },
+  { img:'res-0417-0841', t:'Manchas e bigode chinês', d:'Tom mais uniforme, menos manchas e mais firmeza na região do bigode chinês.', s:'Manchas · colágeno' },
+  { img:'res-0417-0906', t:'Manchas e poros dilatados', d:'Mais elasticidade, rugas finas e manchas atenuadas.', s:'Textura' },
+  { img:'res-0417-0918', t:'Clareamento do melasma', d:'Melasma no rosto mais claro, com a paciente ainda em tratamento.', s:'1 sessão' },
+  { img:'res-0519', t:'Melasma', d:'Manchas do melasma visivelmente mais suaves.', s:'Melasma' },
+  { img:'res-0909', t:'Acne ativa e oleosidade', d:'Controle da oleosidade e secagem das espinhas.', s:'3 sessões' },
+];
+const lav = document.getElementById('lav');
+lav.innerHTML = LAV.map(c => `
+  <article class="lav-card"><div class="im"><img src="img/${c.img}.webp" alt="Antes e depois: ${c.t}, Laser Lavieen" loading="lazy"></div>
+  <h4>${c.t}</h4><p>${c.d}</p><span class="ses">${c.s}</span></article>`).join('');
+const lstep = () => lav.querySelector('.lav-card').offsetWidth + 18;
+document.getElementById('lprev').onclick = () => lav.scrollBy({ left: -lstep(), behavior: 'smooth' });
+document.getElementById('lnext').onclick = () => lav.scrollBy({ left: lstep(), behavior: 'smooth' });
+let ldown = null;
+lav.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; ldown = { x: e.clientX, l: lav.scrollLeft }; lav.classList.add('drag'); });
+addEventListener('pointermove', e => { if (ldown) lav.scrollLeft = ldown.l - (e.clientX - ldown.x); });
+addEventListener('pointerup', () => { if (!ldown) return; ldown = null; lav.classList.remove('drag'); const st = lstep(); lav.scrollTo({ left: Math.round(lav.scrollLeft / st) * st, behavior: 'smooth' }); });
+
+/* comparador antes/depois */
+const ba = document.getElementById('ba'), bain = ba.querySelector('input');
+const setX = v => ba.style.setProperty('--x', v + '%');
+bain.addEventListener('input', () => setX(bain.value));
+const bao = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  bao.disconnect();
+  const keys = [[0, 50], [700, 18], [1500, 82], [2200, 50]], t0 = performance.now();
+  const ease = k => k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+  const tick = t => {
+    const dt = t - t0, i = keys.findIndex(k => k[0] > dt);
+    if (i === -1) { setX(50); bain.value = 50; return; }
+    const [ta, va] = keys[i - 1], [tb, vb] = keys[i];
+    const v = va + (vb - va) * ease((dt - ta) / (tb - ta));
+    setX(v); bain.value = v; requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}), { threshold: .5 });
+bao.observe(ba);
 
 /* depoimentos */
 const qs = [...document.querySelectorAll('.q')]; let qi = 0, qt;
